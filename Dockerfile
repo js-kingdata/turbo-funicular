@@ -11,8 +11,7 @@ RUN wget https://chromedriver.storage.googleapis.com/96.0.4664.45/chromedriver_l
     mv -f chromedriver /usr/local/share/chromedriver && \
     ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver && \
     ln -s /usr/local/share/chromedriver /usr/bin/chromedriver && \
-    rm -rf chromedriver_linux64.zip
-
-RUN apt autoremove -y && apt clean && rm -rf /var/lib/apt/lists/*
+    rm -rf chromedriver_linux64.zip && \
+    apt autoremove -y && apt clean && rm -rf /var/lib/apt/lists/*
 
 CMD ["bash"]
